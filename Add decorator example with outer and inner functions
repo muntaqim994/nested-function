@@ -1,0 +1,11 @@
+def outer(func):
+    print("outer function")
+    def inner():
+        print("inner function")
+    func()
+    return inner
+
+def demo():
+    print("demo function")
+ref=outer(demo)
+ref()
